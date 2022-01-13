@@ -147,9 +147,9 @@ public class Cliente1
  {
         DecimalFormat y = new DecimalFormat("0.00");
 
-        return "\nNombre: "+nombre.toString()+"\nRFC: "+rfc+"\nTelÈfono: "+telefono+"\nCorreo: "+correo+"\nDirecciÛn: "+direccion.toString()+
-       "\nMunicipio: "+municipio+"\nFecha de primera compra: "+fechaPrimCompra+"\nFecha de ˙ltima compra: "+fechaUltimCompra+
-       "\nMonto de compra m·s alta: $"+y.format(montoCompAlt);
+        return "\nNombre: "+nombre.toString()+"\nRFC: "+rfc+"\nTel√©fono: "+telefono+"\nCorreo: "+correo+"\nDirecci√≥n: "+direccion.toString()+
+       "\nMunicipio: "+municipio+"\nFecha de primera compra: "+fechaPrimCompra+"\nFecha de √∫ltima compra: "+fechaUltimCompra+
+       "\nMonto de compra m√°s alta: $"+y.format(montoCompAlt);
    }
 }
 
@@ -336,37 +336,37 @@ class Principal
         LocalDate fechaUltima3 = LocalDate.of(2018, 02, 25);
 
         //Llenado del nombre
-        Nombre nombre1 = new Nombre("Melania","Hern·ndez","Coronado");
-        Nombre nombre2 = new Nombre("Adriana","MartÌnez","PÈrez");
+        Nombre nombre1 = new Nombre("Melania","Hern√°ndez","Coronado");
+        Nombre nombre2 = new Nombre("Adriana","Mart√≠nez","P√©rez");
         Nombre nombre3 = new Nombre("Alfonso","Villarreal","Castillo");
 
-        //Llenado de la direcciÛn
-        Direccion dir1 = new Direccion("Encelade",321,"Residencial Nova","San Nicol·s de los Garza",66464);
+        //Llenado de la direcci√≥n
+        Direccion dir1 = new Direccion("Encelade",321,"Residencial Nova","San Nicol√°s de los Garza",66464);
         Direccion dir2 = new Direccion("Rosas",623,"Colonia Villa","San Pedro",32312);
         Direccion dir3 = new Direccion("Temis",1021,"Residencial Bonita","Escobedo",94382);
 
 
         //Llenado de objetos
-        Cliente1 cliente1 = new Cliente1(nombre1, "HECM8321938AO", "8182665106", "melania.hernandez@udem.edu", dir1, "San Nicol·s de los Garza", fechaPrimera1, fechaUltima1, 10000.50f, 0);
+        Cliente1 cliente1 = new Cliente1(nombre1, "HECM8321938AO", "8182665106", "melania.hernandez@udem.edu", dir1, "San Nicol√°s de los Garza", fechaPrimera1, fechaUltima1, 10000.50f, 0);
         Gold gold1 = new Gold(nombre2, "AHC832198A", "831283821", "adriana.martinez@udem.edu", dir2, "San Pedro", fechaPrimera2, fechaUltima2, 25000f,0);
         Platino platino1 = new Platino(nombre3, "ALFC318931A", "83182133", "alfonso.villarreal@hotmail.com", dir3, "Escobedo", fechaPrimera3, fechaUltima3, 30000f, 0, 12);
 
      //Desplegado para cliente
         cliente1.definirDescuento();
-        System.out.println("\nCLIENTE EST¡NDAR\n"+cliente1);
-        System.out.println("\nAÒos de antiguedad: "+cliente1.calcularAniosAnti(fechaActual));
+        System.out.println("\nCLIENTE EST√ÅNDAR\n"+cliente1);
+        System.out.println("\nA√±os de antiguedad: "+cliente1.calcularAniosAnti(fechaActual));
         System.out.println("\nDescuento: "+y.format((cliente1.getDescuento())*100)+"%\n");
 
         //Desplegado para gold
         gold1.definirDescuento();
         System.out.println("\nCLIENTE GOLD\n"+gold1);
-        System.out.println("\nAÒos de antiguedad: "+gold1.calcularAniosAnti(fechaActual));
+        System.out.println("\nA√±os de antiguedad: "+gold1.calcularAniosAnti(fechaActual));
         System.out.println("\nDescuento: "+y.format((gold1.getDescuento())*100)+"%\n");
 
          //Desplegado para platino
          platino1.definirDescuento();
          System.out.println("\nCLIENTE PLATINO\n"+platino1);
-         System.out.println("\nAÒos de antiguedad: "+platino1.calcularAniosAnti(fechaActual));
+         System.out.println("\nA√±os de antiguedad: "+platino1.calcularAniosAnti(fechaActual));
          System.out.println("\nDescuento: "+y.format((platino1.getDescuento())*100)+"%\n");
     }
 }
