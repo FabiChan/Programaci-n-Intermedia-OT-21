@@ -1,11 +1,11 @@
-//Nombre: Leslie Fabiola LÛpez Rosale     571315
-//CÛdigo de Honor: "Yo, Leslie LÛpez, doy mi palabra de que he realizado este examen final con integridad acadÈmica"
+//Nombre: Leslie Fabiola L√≥pez Rosale     571315
+//C√≥digo de Honor: "Yo, Leslie L√≥pez, doy mi palabra de que he realizado este examen final con integridad acad√©mica"
 
 import java.io.*;
 import java.util.*;
 import java.text.*;
 
-//clase Acta que tendr· los elementos de un acta fiscal
+//clase Acta que tendr√° los elementos de un acta fiscal
 class Acta {
    private int tipo;
    private String dia;
@@ -36,12 +36,12 @@ class Acta {
 class Reporte1 {
    private ArrayList<Acta> actas;
    
-   //mÈtodo constructor
+   //m√©todo constructor
    public Reporte1(ArrayList<Acta> actas) {
       setActas(actas);
    }
    
-   //mÈtodos set y get
+   //m√©todos set y get
    public void setActas(ArrayList<Acta> actas) {
         this.actas = actas;
    }
@@ -49,7 +49,7 @@ class Reporte1 {
         return actas;
    }
    
-   //mÈtodo para calcular el total del importe de acerdo al dia de la semana 
+   //m√©todo para calcular el total del importe de acerdo al dia de la semana 
    public double calcularImporte(String diaS) {
       double importe = 0;
       for(Acta acta: actas)
@@ -58,7 +58,7 @@ class Reporte1 {
       return importe;   
    }
    
-   //MÈtodo para generar los espacios de formato
+   //M√©todo para generar los espacios de formato
    public String generarEspacios(String variable){
       while(variable.length() < 21){
          variable += " ";
@@ -66,7 +66,7 @@ class Reporte1 {
       return variable;
    }
    
-   //mÈtodo para imprimir el reporte 1
+   //m√©todo para imprimir el reporte 1
    public String toString() {
       DecimalFormat d= new DecimalFormat("0.00");
       String salida = "\n\nRelacion de actas solicitadas por dia\n\n\nDia\t\t\t\t\t\tImporte\n\n";
@@ -102,7 +102,7 @@ class Reporte2 {
       return total;   
    }
    
-   //MÈtodo para generar los espacios de formato
+   //M√©todo para generar los espacios de formato
    public String generarEspacios(String variable){
       while(variable.length() < 24){
          variable += " ";
@@ -110,7 +110,7 @@ class Reporte2 {
       return variable;
    }
    
-   //mÈtodo para imprimir el reporte 2
+   //m√©todo para imprimir el reporte 2
    public String toString() {
       String salida = "\n\n\nRelacion de actas solicitadas por tipo\n\n\nTipo de Acta\t\t\tCantidad\n\n";
       salida += generarEspacios("Nacimiento")+generarEspacios(String.valueOf(calcularCant(1)))+"\n"+generarEspacios("Defuncion")+generarEspacios(String.valueOf(calcularCant(2)))+"\n"+generarEspacios("Matrimonio")+generarEspacios(String.valueOf(calcularCant(3))+"\n"+generarEspacios("Divorcio")+generarEspacios(String.valueOf(calcularCant(4))));
@@ -121,7 +121,7 @@ class Reporte2 {
 //Clase Principal
 class Principal {
    public static void main(String[] args) {
-      ArrayList<Acta> actas = new ArrayList<>(); //variable que contendr· todas las actas
+      ArrayList<Acta> actas = new ArrayList<>(); //variable que contendr√° todas las actas
       //lectura del archivo
       try {
          File f = new File("C:actasExamenIntermedia.txt");
