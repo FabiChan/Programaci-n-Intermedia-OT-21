@@ -1,0 +1,6 @@
+Lech, $23
+Chocolate, $12
+Cereal, $18
+arroz, $11
+dulce, $4
+pollito, $40
